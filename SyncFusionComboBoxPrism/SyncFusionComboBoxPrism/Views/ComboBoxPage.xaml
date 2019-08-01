@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:sfComboBox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="SyncFusionComboBoxPrism.Views.ComboBoxPage">
+    <StackLayout
+        Orientation="Vertical">
+        <sfComboBox:SfComboBox
+            x:Name="ItemDropdown"
+            AutomationId="ItemDropdown"
+            AutomationProperties.IsInAccessibleTree="True"
+            DataSource="{Binding Items}"
+            SelectedItem="{Binding SelectedItem}">
+            <sfComboBox:SfComboBox.CustomView>
+                <Grid Padding="10, 0, 0, 0">
+                    <Label x:Name="customLabel"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding SelectedItem.Label}"
+                        HorizontalTextAlignment="Start"/>
+                </Grid>
+            </sfComboBox:SfComboBox.CustomView>
+            <sfComboBox:SfComboBox.Behaviors>
+                <behaviors:EventToCommandBehavior
+                    EventName="SelectionChanged"
+                    Command="{Binding SelectedItemCommand}" 
+                    EventArgsParameterPath="Value"/>
+            </sfComboBox:SfComboBox.Behaviors>
+            <sfComboBox:SfComboBox.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label 
+                            Text="{Binding Label}" 
+                            HorizontalTextAlignment="Start"
+                            Margin="5"
+                            AutomationId="{Binding AutomationId, StringFormat='CheckSortOption{0}'}"
+                            AutomationProperties.IsInAccessibleTree="True" />
+                    </ViewCell>
+                </DataTemplate>
+            </sfComboBox:SfComboBox.ItemTemplate>
+        </sfComboBox:SfComboBox>
+    </StackLayout>
+</ContentPage>

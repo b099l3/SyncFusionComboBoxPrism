@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="SyncFusionComboBoxPrism.Views.MainPage">
+    <StackLayout>
+        <Label Text="{Binding InitalMemoryText}" TextColor="Black"/>
+        <Label Text="{Binding MemoryText}" TextColor="Black"/>
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Go to ComboBox"
+            Command="{Binding GoToComboBoxCommand}"/>
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="Go to MainPage"
+            Command="{Binding GoToMainPageCommand}"/>
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Text="GC"
+            Command="{Binding GCCommand}"/>
+    </StackLayout>
+
+</ContentPage>
