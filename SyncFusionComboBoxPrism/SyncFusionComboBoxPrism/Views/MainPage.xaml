@@ -15,6 +15,11 @@
         <Button
             HorizontalOptions="Center"
             VerticalOptions="Center"
+            Text="Go to ListView"
+            Command="{Binding GoToListViewCommand}"/>
+        <Button
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             Text="Go to MainPage"
             Command="{Binding GoToMainPageCommand}"/>
         <Button

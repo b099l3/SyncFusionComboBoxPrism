@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Syncfusion.ListView.XForms.UWP;
 
 namespace SyncFusionComboBoxPrism.UWP
 {
@@ -20,6 +21,8 @@ namespace SyncFusionComboBoxPrism.UWP
         public MainPage()
         {
             this.InitializeComponent();
+
+            SfListViewRenderer.Init();
 
             LoadApplication(new SyncFusionComboBoxPrism.App());
         }

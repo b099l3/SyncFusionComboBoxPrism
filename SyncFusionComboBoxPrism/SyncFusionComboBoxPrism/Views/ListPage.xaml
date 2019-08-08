@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:xForms="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:behaviors="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="SyncFusionComboBoxPrism.Views.ListPage">
+    <StackLayout
+        Orientation="Vertical">
+        <xForms:SfListView
+            HeightRequest="200"
+            x:Name="ListView"
+            ItemsSource="{Binding People}">
+            <xForms:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid
+                        Margin="10,2.5,10,2.5"
+                        Padding="0"
+                        RowSpacing="0"
+                        ColumnSpacing="0"
+                        MinimumHeightRequest="35"
+                        WidthRequest="50">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="6*" />
+                            <ColumnDefinition Width="4*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            AutomationId="{Binding AutomationId, StringFormat='First{0}'}"
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Text="{Binding FirstName}"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="Center" />
+                        <Label
+                            Grid.Column="1"
+                            AutomationId="{Binding AutomationId, StringFormat='Last{0}'}"
+                            AutomationProperties.IsInAccessibleTree="True"
+                            Text="{Binding LastName}"
+                            HorizontalOptions="End"
+                            HorizontalTextAlignment="End"
+                            VerticalOptions="Center" />
+                    </Grid>
+                </DataTemplate>
+            </xForms:SfListView.ItemTemplate>
+        </xForms:SfListView>
+        <Button x:Name="AddItemButton" Command="{Binding AddItemCommand}" Text="Add Person"/>
+    </StackLayout>
+</ContentPage>
