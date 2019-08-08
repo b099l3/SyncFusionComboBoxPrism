@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
@@ -14,6 +15,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Syncfusion.ListView.XForms.UWP;
+using Syncfusion.XForms.UWP.ComboBox;
 
 namespace SyncFusionComboBoxPrism.UWP
 {
@@ -39,8 +42,6 @@ namespace SyncFusionComboBoxPrism.UWP
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-
-
             Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
@@ -52,7 +53,13 @@ namespace SyncFusionComboBoxPrism.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Xamarin.Forms.Forms.Init(e);
+                List<Assembly> assembliesToInclude = new List<Assembly>
+                {
+                    typeof(SfListViewRenderer).GetTypeInfo().Assembly,
+                    typeof(SfComboBoxRenderer).GetTypeInfo().Assembly
+                };
+
+                Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

@@ -1,5 +1,4 @@
 ﻿using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
 using SyncFusionComboBoxPrism.Models;
 using System;

@@ -53,6 +53,27 @@ namespace SyncFusionComboBoxPrism.Droid
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_reverseLayout = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_reverseLayout;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_spanCount = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_spanCount;
 			global::Syncfusion.XForms.Android.ComboBox.Resource.Styleable.RecyclerView_stackFromEnd = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.layoutManager = global::SyncFusionComboBoxPrism.Droid.Resource.Attribute.layoutManager;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.reverseLayout = global::SyncFusionComboBoxPrism.Droid.Resource.Attribute.reverseLayout;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.spanCount = global::SyncFusionComboBoxPrism.Droid.Resource.Attribute.spanCount;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.stackFromEnd = global::SyncFusionComboBoxPrism.Droid.Resource.Attribute.stackFromEnd;
+			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::SyncFusionComboBoxPrism.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::SyncFusionComboBoxPrism.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::SyncFusionComboBoxPrism.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Syncfusion.ListView.XForms.Android.Resource.Drawable.input_layout_drop_down_icon = global::SyncFusionComboBoxPrism.Droid.Resource.Drawable.input_layout_drop_down_icon;
+			global::Syncfusion.ListView.XForms.Android.Resource.Drawable.inputlayout_togglecollapseicon = global::SyncFusionComboBoxPrism.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.ListView.XForms.Android.Resource.Drawable.inputlayout_togglevisibleicon = global::SyncFusionComboBoxPrism.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.ListView.XForms.Android.Resource.Id.item_touch_helper_previous_elevation = global::SyncFusionComboBoxPrism.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.ApplicationName = global::SyncFusionComboBoxPrism.Droid.Resource.String.ApplicationName;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Hello = global::SyncFusionComboBoxPrism.Droid.Resource.String.Hello;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Load_More = global::SyncFusionComboBoxPrism.Droid.Resource.String.Load_More;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_android_orientation = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_layoutManager = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_reverseLayout = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_spanCount = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::SyncFusionComboBoxPrism.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::SyncFusionComboBoxPrism.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::SyncFusionComboBoxPrism.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::SyncFusionComboBoxPrism.Droid.Resource.Attribute.font;
@@ -7703,6 +7724,15 @@ namespace SyncFusionComboBoxPrism.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f0b004f
+			public const int ApplicationName = 2131427407;
+			
+			// aapt resource value: 0x7f0b004e
+			public const int Hello = 2131427406;
+			
+			// aapt resource value: 0x7f0b0050
+			public const int Load_More = 2131427408;
 			
 			// aapt resource value: 0x7f0b0018
 			public const int abc_action_bar_home_description = 2131427352;

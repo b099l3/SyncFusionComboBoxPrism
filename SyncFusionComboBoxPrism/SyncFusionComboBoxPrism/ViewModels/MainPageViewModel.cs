@@ -26,12 +26,14 @@ namespace SyncFusionComboBoxPrism.ViewModels
 
         public DelegateCommand GoToComboBoxCommand { get; set; } 
         public DelegateCommand GoToMainPageCommand { get; set; } 
+        public DelegateCommand GoToListViewCommand { get; set; }
         public DelegateCommand GCCommand { get; set; } 
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
             GoToComboBoxCommand = new DelegateCommand(async () => await NavigationService.NavigateAsync("ComboBoxPage"));
             GoToMainPageCommand = new DelegateCommand(async () => await NavigationService.NavigateAsync("MainPage"));
+            GoToListViewCommand = new DelegateCommand(async () => await NavigationService.NavigateAsync("ListPage"));
             GCCommand = new DelegateCommand(GCAndUpdate);
 
         }
